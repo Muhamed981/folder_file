@@ -1,0 +1,71 @@
+{
+    "name": "shopware/production",
+    "type": "project",
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "custom/plugins/*",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "platform",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/build/repos/core",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "/build/repos/administration",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "/build/repos/storefront",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "path",
+            "url": "/build/repos/elasticsearch",
+            "options": {
+                "symlink": false
+            }
+        }
+    ],
+    "config": {
+        "optimize-autoloader": true
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Shopware\\Production\\": "src/"
+        }
+    },
+    "require": {
+        "shopware/core": "v6.0.0+ea2@dev",
+        "shopware/storefront": "v6.0.0+ea2@dev",
+        "shopware/administration": "v6.0.0+ea2@dev",
+        "shopware/elasticsearch": "v6.0.0+ea2@dev",
+
+        "symfony/console": "4.3.4",
+        "symfony/process": "4.3.4",
+        "symfony/dotenv": "4.3.4",
+
+        "ocramius/package-versions": "1.4.0"
+    }
+}
